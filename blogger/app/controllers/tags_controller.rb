@@ -1,4 +1,6 @@
 class TagsController < ApplicationController
+    http_basic_authenticate_with name: "mymustard", password: "isbrown12", except: [:index, :show]
+    
     def show
         @tag = Tag.find(params[:id])
     end
@@ -6,14 +8,7 @@ class TagsController < ApplicationController
     def index
         @tags = Tag.all
     end
-    
-            # def destroy
-        # @article = Article.find(params[:id]).destroy
-        
-        # flash.notice = "Article '#{@article.title}' Deleted"
-        # redirect_to articles_path
-        # end
-    
+
     def destroy
         @tag = Tag.find(params[:id]).destroy
         flash.notice = "Tag '#{@tag.name}' Deleted"
