@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 
-  http_basic_authenticate_with name: "mymustard", password: "isbrown12"
+  #http_basic_authenticate_with name: "mymustard", password: "isbrown12"
 
 
     
@@ -9,7 +9,6 @@ class CommentsController < ApplicationController
     @comment.article_id = params[:article_id]
   
     @comment.save
-  
     redirect_to article_path(@comment.article)
   end
 

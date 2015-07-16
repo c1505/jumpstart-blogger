@@ -1,5 +1,5 @@
 class TagsController < ApplicationController
-    http_basic_authenticate_with name: "mymustard", password: "isbrown12", except: [:index, :show]
+    #http_basic_authenticate_with name: "mymustard", password: "isbrown12", except: [:index, :show]
     
     def show
         @tag = Tag.find(params[:id])
