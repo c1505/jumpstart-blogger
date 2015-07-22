@@ -9,7 +9,7 @@
         <%= image_tag @article.image.url %><br />
     <% end %>
 </p>
-<p>Body: <%= @article.body %></p>
+<!--<p>Body: <%= @article.body %></p>-->
 <h3>Comments(<%= @article.comments.size %>)</h3>
 <%= render partial: 'articles/comment', collection: @article.comments %>
 <%= render partial: 'comments/form' %>

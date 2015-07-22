@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
     include ArticlesHelper
-    http_basic_authenticate_with name: "mymustard", password: "isbrown12", except: [:index, :show]
+    #http_basic_authenticate_with name: "mymustard", password: "isbrown12", except: [:index, :show]
     def index
         @articles = Article.all
     end
@@ -54,7 +54,8 @@ end
 #   redirect_to article_path(@article)
 # end
 
-
+#retrieve user input
+#call method with user input
 
 
 
